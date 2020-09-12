@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "nombre": "Matia",
+      "correo": "maria@test.co",
+      "cedula": "123123123",
+      "fechaPagar": "2020-09-10T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": true,
+      "status": true
+    },
+    {
+      "nombre": "Tomas",
+      "correo": "tomas@test.co",
+      "cedula": "321321",
+      "fechaPagar": "2020-09-10T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": false,
+      "status": true
+    },
+    {
+      "nombre": "Claudia",
+      "correo": "claudia@test.co",
+      "cedula": "234234",
+      "fechaPagar": "2020-09-10T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": false,
+      "status": false
+    },
+    {
+      "nombre": "Tito",
+      "correo": "tito@test.co",
+      "cedula": "432432",
+      "fechaPagar": "2020-09-10T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": false,
+      "status": false
+    }
+  ]
+}
