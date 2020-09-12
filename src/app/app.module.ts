@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 // Component
 import { LoanSimulatorComponent } from './components/loan-simulator/loan-simulator.component';
@@ -20,7 +21,8 @@ import { NewUserComponent } from './components/new-user/new-user.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ApplicationsApprovedComponent } from './views/applications-approved/applications-approved.component';
 
 
 
@@ -30,11 +32,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     LoanSimulatorComponent,
     FinancialCapitalComponent,
     NewUserComponent,
+    ApplicationsApprovedComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
+    HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

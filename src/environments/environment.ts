@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   maximumLoanValue: 10000000,
   FinancialCapital: 100000000,
-  urlApi:"http://localhost:3000/"
+  urlApi:"http://localhost:3000"
 };
 
 /*
