@@ -12,20 +12,18 @@ export class UsersApiService {
   }
 
 
-  getUser(id = 123123123) {
-    this.http.get(`${environment.urlApi}/users?cedula=${id}`)
-      .subscribe(data => {
-        console.log(data);
-      });
+
+
+
+  getUser(idUser: number) {
+    return this.http.get(`${environment.urlApi}/users?cedula=${idUser}`);
   }
 
 
 
   getUsersList(stateUser = true) {
-    this.http.get(`${environment.urlApi}/users?status=${stateUser}`)
-      .subscribe(data => {
-        console.log(data);
-      });
+    return this.http.get(`${environment.urlApi}/users?status=${stateUser}`);
+
   }
 
 }

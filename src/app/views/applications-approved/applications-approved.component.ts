@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ApplicationsApprovedComponent implements OnInit {
 
   constructor(private usersApiService: UsersApiService ) {
-    this.usersApiService.getUser();
+   // this.usersApiService.getUser();
    }
 
   ngOnInit(): void {

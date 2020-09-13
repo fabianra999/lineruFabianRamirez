@@ -29,7 +29,7 @@
                 #input
                 maxlength="10"
                 placeholder="Ex. Nougat"
-
+                required
                 formControlName="nombre"
               />
               <mat-hint align="end">{{ input.value?.length || 0 }}/20</mat-hint>
@@ -42,7 +42,7 @@
                 matInput
                 placeholder="pat@example.com"
                 [formControl]="email"
-
+                required
                 formControlName="correo"
               />
               <mat-error *ngIf="email.invalid">{{
@@ -58,7 +58,7 @@
                 #input
                 maxlength="10"
                 placeholder="Ex. Nougat"
-
+                required
                 formControlName="cedula"
               />
               <mat-hint align="end">{{ input.value?.length || 0 }}/10</mat-hint>
@@ -71,7 +71,7 @@
                 matInput
                 type="number"
                 class="example-right-align"
-
+                required
                 formControlName="valorPrestamo"
                 [(ngModel)]="valorPrestamo"
               />
@@ -97,7 +97,7 @@
             >
           </div>
           <div class="col-6 col-md-4">
-            <mat-slide-toggle formControlName="pagoCredito"
+            <mat-slide-toggle formControlName="pagoCredito" required
               >Pago Credito</mat-slide-toggle
             >
           </div>

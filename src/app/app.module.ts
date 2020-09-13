@@ -23,6 +23,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ApplicationsApprovedComponent } from './views/applications-approved/applications-approved.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { HomeComponent } from './views/home/home.component';
+import { RejectedApplicationsComponent } from './views/rejected-applications/rejected-applications.component';
 
 
 
@@ -33,6 +37,10 @@ import { ApplicationsApprovedComponent } from './views/applications-approved/app
     FinancialCapitalComponent,
     NewUserComponent,
     ApplicationsApprovedComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    RejectedApplicationsComponent,
   ],
   imports: [
     BrowserModule,
