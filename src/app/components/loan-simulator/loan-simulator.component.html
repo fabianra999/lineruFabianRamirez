@@ -1,22 +1,28 @@
-<mat-grid-list cols="3">
-  <mat-grid-tile>{{ min | currency }}</mat-grid-tile>
-  <mat-grid-tile>
-    <mat-slider
-      thumbLabel
-      [displayWith]="formatLabel"
-      tickInterval="1000000"
-      [min]="min"
-      [max]="max"
-      [(ngModel)]="ValorCredito"
-      (mouseup)="lanzar($event)"
-    ></mat-slider>
-  </mat-grid-tile>
-  <mat-grid-tile>{{ max | currency }} - {{ValorCredito}}</mat-grid-tile>
-  <mat-grid-tile>
-    <mat-form-field class="example-form-field">
-      <mat-label>Clearable input</mat-label>
-      <!-- <input matInput [(ngModel)]="value" > -->
-      <input matInput [value]="ValorCredito | currency" />
-    </mat-form-field>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="container mt-5 mb-4">
+  <div class="row">
+    <div class="col">
+      <p>{{ min | currency }}</p>
+    </div>
+    <div class="col">
+      <mat-slider
+        tickInterval="1000000"
+        [min]="min"
+        [max]="max"
+        [(ngModel)]="valorSlider"
+        (mouseup)="lanzar($event)"
+      ></mat-slider>
+    </div>
+    <div class="col">
+      <p>{{ max | currency }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field class="example-form-field">
+        <mat-label>Valor Credito</mat-label>
+        <!-- <input matInput [(ngModel)]="value" > -->
+        <input matInput [value]="valorSlider | currency" />
+      </mat-form-field>
+    </div>
+  </div>
+</div>

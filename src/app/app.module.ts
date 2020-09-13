@@ -12,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 // Component
 import { LoanSimulatorComponent } from './components/loan-simulator/loan-simulator.component';
 import { FinancialCapitalComponent } from './components/financial-capital/financial-capital.component';
+import { ApplicationsApprovedComponent } from './views/applications-approved/applications-approved.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { HomeComponent } from './views/home/home.component';
+import { RejectedApplicationsComponent } from './views/rejected-applications/rejected-applications.component';
 
 // Material
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -22,11 +27,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ApplicationsApprovedComponent } from './views/applications-approved/applications-approved.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
-import { HomeComponent } from './views/home/home.component';
-import { RejectedApplicationsComponent } from './views/rejected-applications/rejected-applications.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { CreditFormComponent } from './components/credit-form/credit-form.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -41,6 +44,7 @@ import { RejectedApplicationsComponent } from './views/rejected-applications/rej
     FooterComponent,
     HomeComponent,
     RejectedApplicationsComponent,
+    CreditFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,9 @@ import { RejectedApplicationsComponent } from './views/rejected-applications/rej
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatStepperModule,
+    MatButtonModule
 
   ],
   providers: [],

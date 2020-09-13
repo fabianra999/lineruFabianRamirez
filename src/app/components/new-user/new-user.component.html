@@ -1,27 +1,14 @@
-<!-- <mat-grid-list [cols]="colSize">
-  <mat-grid-tile [colspan]="4" [rowspan]="1">
-    <app-loan-simulator> </app-loan-simulator>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="8" [rowspan]="1">
-
-  </mat-grid-tile>
-</mat-grid-list> -->
-
 <form
   class="example-form"
   [formGroup]="formGroup"
   (ngSubmit)="onFormSubmit()"
   ngNativeValidate
 >
-
-  <div class="container">
+  <div class="container mt-5 mb-4">
     <div class="row">
-      <div class="col col-md-4">
-        <app-loan-simulator [ValorCredito] = "valorPrestamo" (PasameElPueblo)="showPueblo($event)"> </app-loan-simulator>
-      </div>
-      <div class="col col-md-8">
+      <div class="col">
         <div class="row">
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-6">
             <mat-form-field hintLabel="Max 10 characters" appearance="fill">
               <mat-label>Nombre</mat-label>
               <input
@@ -35,7 +22,7 @@
               <mat-hint align="end">{{ input.value?.length || 0 }}/20</mat-hint>
             </mat-form-field>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-6">
             <mat-form-field appearance="fill">
               <mat-label>Correo</mat-label>
               <input
@@ -50,7 +37,7 @@
               }}</mat-error>
             </mat-form-field>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-6">
             <mat-form-field hintLabel="Max 10 characters" appearance="fill">
               <mat-label>Cédula</mat-label>
               <input
@@ -64,7 +51,7 @@
               <mat-hint align="end">{{ input.value?.length || 0 }}/10</mat-hint>
             </mat-form-field>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-6">
             <mat-form-field appearance="fill">
               <mat-label>Valor Prestamo</mat-label>
               <input
@@ -78,12 +65,16 @@
               <span matPrefix>$&nbsp;</span>
               <span matSuffix>.00</span>
             </mat-form-field>
-            {{valorPrestamo}}
+            {{ valorPrestamo }}
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-6">
             <mat-form-field appearance="fill">
               <mat-label>Fecha pagar</mat-label>
-              <input matInput [matDatepicker]="picker" formControlName="fechaPagar"/>
+              <input
+                matInput
+                [matDatepicker]="picker"
+                formControlName="fechaPagar"
+              />
               <mat-datepicker-toggle
                 matSuffix
                 [for]="picker"
@@ -91,13 +82,13 @@
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
           </div>
-          <div class="col-6 col-md-4">
-            <mat-slide-toggle formControlName="estadoCredit"
+          <div class="col-12 col-md-6">
+            <mat-slide-toggle formControlName="estadoCredit" class="slideStyle"
               >Estado de credito</mat-slide-toggle
             >
           </div>
-          <div class="col-6 col-md-4">
-            <mat-slide-toggle formControlName="pagoCredito" required
+          <div class="col-12 col-md-6">
+            <mat-slide-toggle formControlName="pagoCredito" class="slideStyle"
               >Pago Credito</mat-slide-toggle
             >
           </div>
@@ -106,8 +97,14 @@
     </div>
 
     <div class="row">
-      <div class="col-6 col-md-4">
-        <button mat-raised-button type="submit">Save Settings</button>
+      <div class="col-12">
+        <button
+          type="button"
+          class="btn btn-outline-secondary btn-block m-4"
+          type="submit"
+        >
+          Enviar
+        </button>
       </div>
     </div>
   </div>

@@ -14,6 +14,8 @@ export class LoanSimulatorComponent implements OnInit {
 
   max: number;
   min: number;
+  public valorSlider: number;
+
   public value: number;
   loanValue: object;
   public nombre:string;
@@ -33,7 +35,7 @@ export class LoanSimulatorComponent implements OnInit {
     this.max = environment.maximumLoanValue;
     this.min = 1000000;
     // this.value = 1000000;
-    this.value = this.ValorCredito;
+    this.value = this.valorSlider;
     this.nombre = "Pueblo de la Toscana";
 
   }

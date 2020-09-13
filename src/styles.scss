@@ -17,16 +17,19 @@ body {
 .jumbo {
   color: white;
   max-width: 100%;
-  height: 700px;
+  height: 100vh;
   background-position: center 10%;
   background-size: cover;
 }
 
+
 .jumbo-bkgrd {
-  background: url(https://openclipart.org/download/223720/Wall.svg), #2b3137;
+  // background: url(https://openclipart.org/download/223720/Wall.svg), #2b3137;
+  background: url(https://cdn.searchenginejournal.com/wp-content/uploads/2018/04/businesses-need-seo-760x400.png), #2b3137;
   background-size: 100%;
   background-position: center 10%;
   background-size: cover;
+  height: 100vh;
 }
 
 .columns {

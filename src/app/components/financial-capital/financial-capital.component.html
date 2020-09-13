@@ -1,14 +1,23 @@
-<p>{{ initiallyCapital | currency }} -{{ totalCapital | currency }}</p>
 <div class="columns">
-  <div>
-      <div class="fila centrar-text-h">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="fila centrar-text-h">
           <h1>Movimiento de capital.</h1>
-          <br>
-          <p>ViWeb reúne a los equipos para resolver problemas, avanzar ideas y aprender unos de otros en el proceso.</p>
+          <br />
+          <p>
+            Saldo inicial <b>{{ initiallyCapital | currency }}</b> - Nuevo saldo
+            <b>{{ totalCapital | currency }}</b
+            >.
+          </p>
+        </div>
+        <div class="fila centrar-text-h">
+          <img
+            src="http://www.wegwijzerwoerden.nl/images/teamwork-diversity-20471736.jpg"
+            alt="team-work"
+          />
+        </div>
       </div>
-      <div class="fila centrar-text-h">
-          <img src="http://www.wegwijzerwoerden.nl/images/teamwork-diversity-20471736.jpg" alt="team-work">
-
-      </div>
+    </div>
   </div>
 </div>
