@@ -12,18 +12,18 @@ export class UsersApiService {
   }
 
 
-
-
-
   getUser(idUser: number) {
     return this.http.get(`${environment.urlApi}/users?cedula=${idUser}`);
   }
 
 
-
   getUsersList(stateUser = true) {
     return this.http.get(`${environment.urlApi}/users?status=${stateUser}`);
-
   }
+
+  postUser(dataUser) {
+    return this.http.post(`${environment.urlApi}/users`, dataUser);
+  }
+
 
 }

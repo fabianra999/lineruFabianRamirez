@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationsApprovedComponent implements OnInit {
 
-  constructor(private usersApiService: UsersApiService ) {
-   // this.usersApiService.getUser();
-   }
+  public users: any[] = [];
+
+  constructor(private usersApiService: UsersApiService) {
+    // this.usersApiService.getUser();
+    this.usersApiService.getUsersList(true)
+      .subscribe((data: any) => {
+        this.users = data;
+      }, (errorServicio) => {
+      });
+  }
 
   ngOnInit(): void {
   }

@@ -1,1 +1,73 @@
-<p>rejected-applications works!</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Solicitudes Rechazadas</h1>
+    <p class="lead">Lista de usuarios rechazados en base de datos.</p>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3">
+  <div class="col mb-4" *ngFor="let user of users">
+    <div class="card">
+      <img
+        src="https://www.freeiconspng.com/thumbs/profile-icon-png/user-icon-png-person-user-profile-icon-20.png"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <h5 class="card-title font-weight-lighter text-uppercase ">
+          {{ user.nombre }}.
+        </h5>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col">
+                <b>Cedula:</b> <br />
+                {{ user.cedula }}
+              </div>
+              <div class="col">
+                <b>correo:</b> <br />
+                {{ user.correo }}
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col">
+                <b>Valor Prestamo:</b> <br />
+                {{ user.valorPrestamo }}
+              </div>
+              <div class="col">
+                <b>Fecha de Pagar:</b> <br />
+                {{ user.fechaPagar }}
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col">
+                <b>Pago de Credito:</b> <br />
+                {{ user.pagoCredito }}
+              </div>
+              <div class="col">
+                <b>Estado de Credit:</b> <br />
+                {{ user.estadoCredit }}
+              </div>
+            </div>
+            -
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col">
+                <b>Usuario Activo:</b> <br />
+                {{ status }}
+              </div>
+              <div class="col"></div>
+            </div>
+          </li>
+        </ul>
+        <p class="card-text">
+          <small class="text-muted "> <small>Usuario ID: {{ user.id }}</small> </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

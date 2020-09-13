@@ -1,6 +1,7 @@
 {
   "users": [
     {
+      "id": 0,
       "nombre": "Matia",
       "correo": "maria@test.co",
       "cedula": "123123123",
@@ -11,6 +12,7 @@
       "status": true
     },
     {
+      "id": 1,
       "nombre": "Tomas",
       "correo": "tomas@test.co",
       "cedula": "321321",
@@ -21,6 +23,7 @@
       "status": true
     },
     {
+      "id": 2,
       "nombre": "Claudia",
       "correo": "claudia@test.co",
       "cedula": "234234",
@@ -31,6 +34,7 @@
       "status": false
     },
     {
+      "id": 3,
       "nombre": "Tito",
       "correo": "tito@test.co",
       "cedula": "432432",
@@ -39,6 +43,39 @@
       "estadoCredit": true,
       "pagoCredito": false,
       "status": false
+    },
+    {
+      "nombre": "test",
+      "correo": "test@test.co",
+      "cedula": "098098",
+      "valorPrestamo": 2000000,
+      "fechaPagar": "2020-09-25T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": true,
+      "status": true,
+      "id": 4
+    },
+    {
+      "nombre": "test",
+      "correo": "test@ert.co",
+      "cedula": "456456",
+      "valorPrestamo": 1000000,
+      "fechaPagar": "2020-09-25T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": true,
+      "status": true,
+      "id": 5
+    },
+    {
+      "nombre": "uhiuh",
+      "correo": "iuh@kjh.co",
+      "cedula": "987345",
+      "valorPrestamo": 3000000,
+      "fechaPagar": "2020-09-24T05:00:00.000Z",
+      "estadoCredit": true,
+      "pagoCredito": true,
+      "status": true,
+      "id": 6
     }
   ]
 }

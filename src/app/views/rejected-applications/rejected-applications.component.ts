@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersApiService } from './../../services/users-api.service';
 
 @Component({
   selector: 'app-rejected-applications',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RejectedApplicationsComponent implements OnInit {
 
-  constructor() { }
+  public users: any[] = [];
+
+  constructor(private usersApiService: UsersApiService) {
+    // this.usersApiService.getUser();
+    this.usersApiService.getUsersList(false)
+      .subscribe((data: any) => {
+        this.users = data;
+      }, (errorServicio) => {
+      });
+  }
 
   ngOnInit(): void {
   }
