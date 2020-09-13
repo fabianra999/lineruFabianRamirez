@@ -13,11 +13,6 @@ export class FinancialCapitalComponent implements OnInit {
   initiallyCapital: number;
   totalBorrowed: number = 0;
 
-  calcular(MontoActual: number) {
-    console.log(`MontoActual ${MontoActual}`);
-    this.totalCapital = this.totalCapital - MontoActual;
-    console.log(`MontoActual new ${MontoActual}`);
-  }
 
   calculateCapital() {
     this.usersApiService.getUsersList(true)
@@ -30,7 +25,6 @@ export class FinancialCapitalComponent implements OnInit {
 
       });
   }
-
 
   constructor(private usersApiService: UsersApiService) {
     this.initiallyCapital = environment.FinancialCapital;

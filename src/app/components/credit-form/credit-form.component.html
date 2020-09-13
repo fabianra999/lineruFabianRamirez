@@ -1,10 +1,9 @@
 <mat-horizontal-stepper #stepper class="mt-5">
   <mat-step
-    [stepControl]="firstFormGroup"
     errorMessage="Valor es requerido."
     class="m-5"
   >
-    <form [formGroup]="firstFormGroup">
+    <form >
       <ng-template matStepLabel>Valor Crédito</ng-template>
 
       <!-- <app-loan-simulator [ValorCredito] = "valorPrestamo" (PasameElPueblo)="showPueblo($event)"> </app-loan-simulator> -->
@@ -17,8 +16,8 @@
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" errorMessage="Datos requeridos.">
-    <form [formGroup]="secondFormGroup">
+  <mat-step  errorMessage="Datos requeridos.">
+    <form >
       <ng-template matStepLabel>Datos de contactos</ng-template>
 
       <app-new-user> </app-new-user>

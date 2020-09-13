@@ -11,15 +11,15 @@ export class ApplicationsApprovedComponent implements OnInit {
   public users: any[] = [];
 
   constructor(private usersApiService: UsersApiService) {
-    // this.usersApiService.getUser();
+
+  }
+
+  ngOnInit(): void {
     this.usersApiService.getUsersList(true)
       .subscribe((data: any) => {
         this.users = data;
       }, (errorServicio) => {
       });
-  }
-
-  ngOnInit(): void {
   }
 
 }

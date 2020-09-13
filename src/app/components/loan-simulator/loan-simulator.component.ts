@@ -12,41 +12,33 @@ export class LoanSimulatorComponent implements OnInit {
   @Output() PasameElPueblo = new EventEmitter();
 
 
-  max: number;
-  min: number;
+  public max: number;
+  public min: number;
   public valorSlider: number;
 
   public value: number;
-  loanValue: object;
-  public nombre:string;
+  public loanValue: object;
 
-
-
-
-  formatLabel(value: number) {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'k';
-    }
-
-    return value;
-  }
 
   constructor() {
     this.max = environment.maximumLoanValue;
     this.min = 1000000;
-    // this.value = 1000000;
-    this.value = this.valorSlider;
-    this.nombre = "Pueblo de la Toscana";
+    this.value = this.ValorCredito;
 
   }
   ngOnInit(): void {
 
   }
 
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+    return value;
+  }
 
   lanzar(event) {
-
-      this.PasameElPueblo.emit(this.value);
+    this.PasameElPueblo.emit(this.value);
   }
 
 
