@@ -18,7 +18,7 @@ export function reducer(state: appState = initialState, action: appAction.mensaj
         newValue: action.payload
       }
       break;
-    default:
+      default:
       return state;
       break;
   }

@@ -61,11 +61,12 @@
                 required
                 formControlName="valorPrestamo"
                 [(ngModel)]="valorPrestamo"
+                [value]="(creditValue$ | async)?.newValue "
               />
               <span matPrefix>$&nbsp;</span>
               <span matSuffix>.00</span>
             </mat-form-field>
-            {{ valorPrestamo }}
+            <p>{{ (creditValue$ | async)?.newValue }}</p>
           </div>
           <div class="col-12 col-md-6">
             <mat-form-field appearance="fill">

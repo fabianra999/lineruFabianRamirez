@@ -18,8 +18,9 @@
         tickInterval="1000000"
         [min]="min"
         [max]="max"
-        [(ngModel)]="valorSlider"
-        (mouseup)="lanzar($event)"
+        [(ngModel)]="value"
+        (mouseup)="creditValueEvent()"
+        (mousedown)="creditValueEvent()"
       ></mat-slider>
     </div>
     <div class="col">
@@ -30,8 +31,14 @@
     <div class="col">
       <mat-form-field class="example-form-field">
         <mat-label>Valor Credito</mat-label>
-        <!-- <input matInput [(ngModel)]="value" > -->
-        <input matInput [value]="valorSlider | currency" />
+        <input
+          type="number"
+          matInput
+          [(ngModel)]="value"
+          [value]="value | currency"
+          (mouseup)="creditValueEvent()"
+          (mousedown)="creditValueEvent()"
+        />
       </mat-form-field>
     </div>
   </div>

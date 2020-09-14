@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { FormControl, Validators, FormBuilder, FormGroup, } from '@angular/forms';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { UsersApiService } from '../../services/users-api.service';
@@ -18,8 +20,10 @@ export class NewUserComponent implements OnInit {
   public valorPrestamo: number;
   public alert: boolean = false;
   public alertSuccess: boolean = false;
+  creditValue$: Observable<any>;
 
-  constructor(formBuilder: FormBuilder, breakpointObserver: BreakpointObserver, private usersApiService: UsersApiService) {
+  constructor(formBuilder: FormBuilder, breakpointObserver: BreakpointObserver, private usersApiService: UsersApiService, private store: Store<any>) {
+    this.creditValue$ = store.select('appStore');
 
     this.formGroup = formBuilder.group({
       nombre: ['', Validators.requiredTrue],
