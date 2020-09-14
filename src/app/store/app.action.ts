@@ -1,12 +1,12 @@
-import { Action } from '@ngrx/store';
+import { Action } from '@ngrx/store'
+import { appState } from "./app.reducer";
 
-
-export const NEWVALUE = '[appStore] 0';
+export const NEWVALUE = 'Add tada';
 
 export class Newvalue implements Action {
   readonly type = NEWVALUE;
-  constructor(public payload: number) { }
+  constructor(public payload: appState) { }
 }
 
 
-export type mensajeAction = Newvalue;
+export type Actions = Newvalue;

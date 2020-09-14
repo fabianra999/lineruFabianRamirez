@@ -6,9 +6,11 @@
           <h1>Movimiento de capital.</h1>
           <br />
           <p>
-            Saldo inicial <b>{{ initiallyCapital | currency }}</b> -
-            Nuevo saldo <b>{{ totalCapital | currency }}.</b>
+            Saldo inicial <b>{{ initiallyCapital | currency }}</b> - Nuevo saldo
+            <b>{{ totalCapital | currency }}.</b>
           </p>
+          <p> mmm {{ (newTotal$ | async)?.totalCredits }}</p>
+
         </div>
       </div>
     </div>

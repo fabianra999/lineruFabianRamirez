@@ -31,7 +31,7 @@ export class LoanSimulatorComponent implements OnInit {
   creditValueEvent() {
     console.log('this.value');
     console.log(this.value);
-    this.store.dispatch(new appActions.Newvalue(this.value));
+   // this.store.dispatch(new appActions.Newvalue(this.value));
   }
 
 
